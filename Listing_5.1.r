@@ -1,5 +1,5 @@
 #Load IPEDS Dataset
-destination <- read.csv(sprintf("https://docs.google.com/uc?id=%s&export=download", "14Z5Ypl7MbWz8ySFKtjOUPT9EKfU3mioT"))
+pt <- read.csv(sprintf("https://docs.google.com/uc?id=%s&export=download", "14Z5Ypl7MbWz8ySFKtjOUPT9EKfU3mioT"))
 #Let us extract the two institutions shown in our first figure of this chapter
 destination <- pt[pt$UNITID==215062|pt$UNITID==215239|pt$UNITID==212054, c("UNITID","INSTNM", "LONGITUD","LATITUDE")]
 destination #Geocoded Database of Points
