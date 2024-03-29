@@ -1,5 +1,5 @@
 library(tigris)
-loptions(tigris_use_cache = TRUE)
+options(tigris_use_cache = TRUE)
 #################################################################
 # I. Load roads shapefile and point IPEDS data 
 #################################################################
