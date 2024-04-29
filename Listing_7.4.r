@@ -8,6 +8,8 @@ pts <- read.csv(sprintf("https://docs.google.com/uc?id=%s&export=download", "17B
 origin <- pts[(pts$HIGHDEG==2&pts$CONTROL==1)&(pts$REGION==1|pts$REGION==2), c("UNITID", "LONGITUD", "LATITUDE")]
 #Merge or join
 origin$net_cost_attnd <- as.numeric(pts$NPT4_PUB[match(origin$UNITID, pts$UNITID)])
+origin$LONGITUD<-as.numeric(origin$LONGITUD)
+origin$LATITUDE<-as.numeric(origin$LATITUDE)
 origin <- origin[!is.na(origin$net_cost_attnd),]
 dim(origin)
 #################################################################
