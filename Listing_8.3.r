@@ -8,8 +8,7 @@ options(tigris_use_cache = TRUE)
 #################################################################
 usa <- states()
 "%ni%" <- Negate("%in%")
-irs_state <- read.csv(sprintf("https://docs.google.com/uc?id=%s&
-export=download", "10MOXrw2H_QN3rCsqvXIKQtiJ9c0yGJH5"))
+irs_state <- read.csv(sprintf("https://docs.google.com/uc?id=%s&export=download", "10MOXrw2H_QN3rCsqvXIKQtiJ9c0yGJH5"))
 #################################################################
 # II. Load ZCTA ACS and County Data (code Listing 4.17)
 #################################################################
