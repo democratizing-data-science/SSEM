@@ -12,8 +12,7 @@ irs_state <- read.csv(sprintf("https://docs.google.com/uc?id=%s&export=download"
 #################################################################
 # II. Load ZCTA ACS and County Data (code Listing 4.17)
 #################################################################
-zcta <- read.csv(sprintf("https://docs.google.com/uc?id=%s&export
-=download", "1-j6EEHeaOvlP3V5QZamG4z3-u0iv6ExM"))
+zcta <- read.csv(sprintf("https://docs.google.com/uc?id=%s&export=download", "1-j6EEHeaOvlP3V5QZamG4z3-u0iv6ExM"))
 head(zcta)
 #Aggregate at the state level
 acs_state <- aggregate(cbind(povunder50, medincome, unplymt, noplumbing, singlemom, MediIncome, prop_crime) ~ state, data=zcta, FUN=mean)
