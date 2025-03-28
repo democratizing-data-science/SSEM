@@ -5,8 +5,7 @@ options(tigris_use_cache = TRUE)
 # I. Load roads shapefile and origin and destinations points
 #################################################################
 rds <- roads("PA", c("Philadelphia"))
-origin <- read.csv(sprintf("https://docs.google.com/uc?id=%s&
-export=download", "1PffhCIYGdYukuF3sdDTxCwYp5l6-v8lM"))
+origin <- read.csv(sprintf("https://docs.google.com/uc?id=%s&export=download", "1PffhCIYGdYukuF3sdDTxCwYp5l6-v8lM"))
 # Subsetting to only name, Long, and Lat
 origin <- origin[origin$Name=="Whitehall Apts."|origin$Name=="Westpark Plaza"|origin$Name=="Spring Garden Apts."|origin$Name=="Raymond Rosen Manor",c("Name", "longitude","latitude")]
 destination <- read.csv(sprintf("https://docs.google.com/uc?id=%s&export=download", "14Z5Ypl7MbWz8ySFKtjOUPT9EKfU3mioT"))
